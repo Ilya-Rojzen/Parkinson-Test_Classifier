@@ -1,2 +1,3 @@
 # Parkinson-Test_Classifier
-PET-Project of LSTM-RNN model that can classify sequential data of Parkinson tests for presence of Parkinson's disease
+### About project
+This is skill-demonstration project where I create LSTM-RNN model and train it to classify data of Parkinson's tests (e.g SS-test, DS-est and CM-Test. Read more above) for pesence/abscence of Parkinson disease features 

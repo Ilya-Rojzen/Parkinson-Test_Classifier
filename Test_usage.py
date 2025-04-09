@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import DataLoader
-from Model import LSTMModel
-from Prepare_data import *
+from Code.Model import LSTMModel
+from Code.Prepare_data import *
 import torch.nn.functional as F
 
 
@@ -11,7 +11,7 @@ loaded_model.load_state_dict(torch.load('trained_model.pt'))
 
 # Загрузка данных для проверки модели
 # Для проверки можете ввести 'Process of creating/Dataset/control/C_0001.txt'
-dataset = prepare_data(load_data(...))
+dataset = prepare_data(load_data('Process of creating/Dataset/control/C_0001.txt'))
 
 # Создание тестового загрузчика
 test_dataloader = DataLoader(dataset, batch_size=5)
@@ -30,8 +30,16 @@ with torch.no_grad():
         else:
             predictions = outputs
 
-        # Преобразования над предсказаниями, если это необходимо
-        # Например, преобразование логитов в вероятности или другие операции
+        # Преобразования над предсказаниями
         probabilities = F.softmax(predictions, dim=1)
 
-        # Дальнейшая обработка предсказанных вероятностей или классов
+# Определение классов по максимальной вероятности
+predicted_classes = torch.argmax(probabilities, dim=1)
+
+# Проверка, все ли элементы принадлежат одному классу
+if (predicted_classes == 0).all():
+    print("Пациент здоров")
+elif (predicted_classes == 1).all():
+    print("Пациент болен Паркинсонизмом")
+else:
+    print("По этим данным нельзя определить, болен ли пациент")

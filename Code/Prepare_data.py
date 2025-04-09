@@ -30,8 +30,7 @@ class SequenceDataset(Dataset):
 # Функция для преобразования датафрейма в Датасет из последовательностей временных шагов
 def prepare_data(dataframe, seq_len=200):
     features = dataframe[['X', 'Y', 'Z', 'Pressure', 'GripAngle']].values
-    labels = dataframe['Label'].values  # Предполагаю, что Label - это целевые значения
-    dataset = SequenceDataset(features, labels, seq_len)
+    dataset = SequenceDataset(features, seq_len=seq_len)
     return dataset
 
 # Функция для загрузки данных из одного файла – на выходе имеем Датафрэйм

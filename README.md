@@ -11,8 +11,8 @@ This is skill-demonstration project where I create LSTM-RNN model and train it t
     — GPU (CUDA) support for accelerated training.
   * Python (version 3.X): Primary programming language.
 2. **Data Processing**:
-  * Data Sources:
-    - Parkinson’s disease datasets (e.g., UCI Machine Learning Repository, Physionet).
+  * Data Sources:\n
+    - Parkinson’s disease datasets (e.g., UCI Machine Learning Repository, Physionet).\n
     - Formats: CSV, sensor time-series. 
   * Data Processing Libraries:
     — **Pandas**: Data loading, cleaning, and preprocessing.

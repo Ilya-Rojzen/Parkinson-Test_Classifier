@@ -12,8 +12,8 @@ This is skill-demonstration project where I create LSTM-RNN model and train it t
   * Python (version 3.X): Primary programming language.
 2. **Data Processing**:
   * Data Sources:
-    — Parkinson’s disease datasets (e.g., UCI Machine Learning Repository, Physionet).
-    — Formats: CSV, sensor time-series.
+    - Parkinson’s disease datasets (e.g., UCI Machine Learning Repository, Physionet).
+    - Formats: CSV, sensor time-series. 
   * Data Processing Libraries:
     — **Pandas**: Data loading, cleaning, and preprocessing.
     — **NumPy**: Handling multidimensional arrays.

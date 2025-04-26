@@ -45,3 +45,20 @@ A skill-demonstration project where I create LSTM-RNN model and train it to clas
 ![Confusion matrix](./pictures/Confusion_matrix_LSTM.png)
 </details>
 
+## **Project Structure**  
+```bash
+Parkinson-Test_Classifier/
+├── Code/
+│   ├── Model.py             # File for model creation (Ru)
+│   ├── Prepare_data.py      # File for data preparation from .csv file to DataLoaders (Ru)
+│
+├── Process of creation/   
+│   ├── parkinson-rnn.ipynb  # Jupyter notebook for experiments (Ru)
+│   ├── Dataset/             # Folder with raw data
+│
+├── Pictures/                # Folder with visualization data
+│
+├── trained_model.pt         # Pre-trained LSTM-model
+├── Test_usage.py            # File for previewing and testing (Ru)
+├── requirements.txt         # Dependency list
+└── README.md                # Project overview
